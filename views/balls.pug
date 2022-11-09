@@ -1,4 +1,14 @@
 extends layout
 
 block content
-  h1 Title
+  h1= title 
+
+  - obj1 = {ball_type: "Soccer", size: 12, weight: 11};
+  - obj2 = {ball_type: "Golf", size: 3, weight: 3};
+  - obj3 = {ball_type: "Bowling", size: 11, weight: 20};
+  - results = [obj1, obj2, obj3];
+
+  div(class="container-fluid")
+    div(class="row m-1")
+      each item in results
+        div(class="col-sm-2") ball_type #{item.ball_type} size #{item.size} wight: #{item.weight}

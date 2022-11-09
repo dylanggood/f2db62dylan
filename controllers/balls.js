@@ -1,7 +1,7 @@
 var Ball = require('../models/balls'); 
  
     // List of all Costumes 
-exports.ball_list = async function(req, res) { 
+exports.ball_list = async function(req, res) { console.log("db results")
     try{ 
         let theBalls = await Ball.find(); 
         res.send(theBalls); 
