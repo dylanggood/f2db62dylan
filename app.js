@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var resourceRouter = require('./routes/resource');
+var ballsRouter = require('./routes/balls');
 
 var Ball = require("./models/balls"); 
 

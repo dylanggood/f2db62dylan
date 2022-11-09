@@ -1,18 +1,19 @@
 extends layout
 
-block content
-  h1 Title
-  p Changing text
-  <button type="button" class="btn btn-secondary">Left</button>
-  <div id="bump">Count</div>
+block content 
+  head
+    body
+      h1 Title
+      p Changing text
+      button(type="button", class="btn btn-secondary", onClick="doBump()") Button
+      div(id="bump") Bump the text
 
-script. 
-  let count = 0;
-  let value = 0;
-  let bump = 1;
+      script.
+        var count = 0;
+        var bump = 1;
 
-  function doBump(count, value, bump) {
-    let sum = count+bump;
-
-
-  }
+        function doBump(){
+          var value = count + bump;
+          bump + 1;
+          document.getElementById("bump").innerHTML = "Count: " + value + " Bump: " + bump;
+        }
