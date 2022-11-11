@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var resourceRouter = require('./routes/resource');
 var ballsRouter = require('./routes/balls');
+var gridRouter = require('./routes/gridbuild');
 
 var Ball = require("./models/balls"); 
 
@@ -78,6 +79,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/balls', ballsRouter);
 app.use('/resource', resourceRouter);
+app.use('/gridbuild', gridRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
